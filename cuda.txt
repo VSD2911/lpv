@@ -205,3 +205,12 @@
     }
 
     3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3   Vector addition successful!
+
+
+//cstdlib is for general-purpose functions, such as memory allocation and random number generation
+//This is a CUDA kernel function. Kernels are functions that are executed on the GPU. This particular kernel is for adding two vectors (a and b) element-wise and storing the result in result.
+
+threadIdx.x represents the index of the thread within its block.
+blockIdx.x represents the index of the block within the grid.
+blockDim.x represents the number of threads per block.
+tid calculates a unique global index for each thread. If tid is less than n (the size of the vectors), it performs the addition and stores the result.
